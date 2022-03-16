@@ -16,7 +16,7 @@ import java.util.List;
 public class MonthController {
 
     @Autowired
-    MonthRepository monthRepository;
+    private MonthRepository monthRepository;
 
 
     @GetMapping("/months")

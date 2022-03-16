@@ -57,7 +57,7 @@ public class Plant {
         this.harvest = harvest;
     }
 
-    @Override
+/*    @Override
     public String toString() {
         return "Plant{" +
                 "id=" + id +
@@ -65,5 +65,5 @@ public class Plant {
                 ", so=" + so +
                 ", harvest=" + harvest +
                 '}';
-    }
+    }*/
 }

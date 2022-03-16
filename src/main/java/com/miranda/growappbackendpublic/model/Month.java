@@ -57,7 +57,7 @@ public class Month {
         this.image = image;
     }
 
-    @Override
+ /*   @Override
     public String toString() {
         return "Month{" +
                 "id=" + id +
@@ -65,6 +65,6 @@ public class Month {
                 ", description='" + description + '\'' +
                 ", image='" + image + '\'' +
                 '}';
-    }
+    }*/
 }
 

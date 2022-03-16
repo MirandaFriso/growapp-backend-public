@@ -15,7 +15,7 @@ import java.util.Optional;
 public class PlantController {
 
     @Autowired
-    PlantService plantService;
+    private PlantService plantService;
 
     //TODO hämta ut plantor där så är valt månadsId
     @GetMapping("plants/so/{so}")

@@ -1,7 +1,5 @@
 package com.miranda.growappbackendpublic;
 
-import com.miranda.growappbackendpublic.model.User;
-import com.miranda.growappbackendpublic.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -14,8 +12,8 @@ public class GrowappBackendPublicApplication implements CommandLineRunner {
 		SpringApplication.run(GrowappBackendPublicApplication.class, args);
 	}
 
-	@Autowired
-	private UserRepository userRepository; //För att kunna spara en användare.
+	/*@Autowired
+	private UserRepository userRepository; //För att kunna spara en användare.*/
 
 	@Override
 	public void run(String... args) throws Exception {

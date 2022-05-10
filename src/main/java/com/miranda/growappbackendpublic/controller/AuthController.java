@@ -1,8 +1,8 @@
-package com.miranda.growappbackendpublic.controllers;
+package com.miranda.growappbackendpublic.controller;
 
-import com.miranda.growappbackendpublic.models.ERole;
-import com.miranda.growappbackendpublic.models.Role;
-import com.miranda.growappbackendpublic.models.User;
+import com.miranda.growappbackendpublic.model.ERole;
+import com.miranda.growappbackendpublic.model.Role;
+import com.miranda.growappbackendpublic.model.User;
 import com.miranda.growappbackendpublic.payload.request.LoginRequest;
 import com.miranda.growappbackendpublic.payload.request.SignupRequest;
 import com.miranda.growappbackendpublic.payload.response.JwtResponse;

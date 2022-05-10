@@ -1,7 +1,7 @@
 package com.miranda.growappbackendpublic.repository;
 
-import com.miranda.growappbackendpublic.models.ERole;
-import com.miranda.growappbackendpublic.models.Role;
+import com.miranda.growappbackendpublic.model.ERole;
+import com.miranda.growappbackendpublic.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

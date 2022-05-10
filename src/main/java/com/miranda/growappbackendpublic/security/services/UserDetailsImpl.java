@@ -1,7 +1,7 @@
 package com.miranda.growappbackendpublic.security.services;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.miranda.growappbackendpublic.models.User;
+import com.miranda.growappbackendpublic.model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

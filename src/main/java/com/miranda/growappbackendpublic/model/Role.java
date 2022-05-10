@@ -1,4 +1,6 @@
-package com.miranda.growappbackendpublic.models;
+package com.miranda.growappbackendpublic.model;
+
+import com.miranda.growappbackendpublic.model.ERole;
 
 import javax.persistence.*;
 

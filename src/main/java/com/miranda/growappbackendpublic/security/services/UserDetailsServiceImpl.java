@@ -1,6 +1,6 @@
 package com.miranda.growappbackendpublic.security.services;
 
-import com.miranda.growappbackendpublic.models.User;
+import com.miranda.growappbackendpublic.model.User;
 import com.miranda.growappbackendpublic.repository.NewUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

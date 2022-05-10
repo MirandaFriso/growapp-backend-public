@@ -1,4 +1,4 @@
-package com.miranda.growappbackendpublic.models;
+package com.miranda.growappbackendpublic.model;
 
 public enum ERole {
     ROLE_USER,

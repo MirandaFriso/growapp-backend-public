@@ -1,9 +1,10 @@
-package com.miranda.growappbackendpublic.models;
+package com.miranda.growappbackendpublic.model;
+
+import com.miranda.growappbackendpublic.model.Role;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 

@@ -15,13 +15,16 @@ public class UserController {
     public String allAccess() {
         return "Public Content.";
     }
+    //public String allAccess() {return "Public Content.";}
 
     @GetMapping("/user")
-    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     //Ändra return
     public String userAccess() {
         return "User Content.";
     }
+
     @GetMapping("/admin")
     @PreAuthorize("hasRole('ADMIN')")
     //Ändra return

@@ -17,13 +17,13 @@ public class PlantController {
     @Autowired
     private PlantService plantService;
 
-    //TODO hämta ut plantor där så är valt månadsId
+    //Hämta ut plantor där så är valt månadsId
     @GetMapping("plants/so/{so}")
     public List<Plant> findPlantsBySo(@PathVariable("so") int so) {
         return plantService.getPlantsBySo(so);
     }
 
-    //TODO hämta ut plantor där skörda är valt månadsId
+    //Hämta ut plantor där skörda är valt månadsId
     @GetMapping("plants/harvest/{harvest}")
     public List<Plant> findPlantsByHarvest(@PathVariable("harvest") int harvest) {
         return plantService.getPlantsByHarvest(harvest);

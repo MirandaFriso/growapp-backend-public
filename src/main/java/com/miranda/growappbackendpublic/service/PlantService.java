@@ -21,8 +21,6 @@ public class PlantService {
     //Hämta plantor som ska sås i en vald månad
     public Optional<Plant> findById(Long id) {
       return plantRepository.findById(id);
-
-
     }
 
     public List<Plant> getPlantsBySo(int so) {

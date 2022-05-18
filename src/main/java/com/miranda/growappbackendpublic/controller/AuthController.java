@@ -64,7 +64,7 @@ public class AuthController {
         if (newUserRepository.existsByUsername(signUpRequest.getUsername())) {
             return ResponseEntity
                     .badRequest()
-                    .body(new MessageResponse("Användarnamnet är redan upptaget."));
+                    .body(new MessageResponse("Användarnamnet är upptaget."));
         }
         if (newUserRepository.existsByEmail(signUpRequest.getEmail())) {
             return ResponseEntity

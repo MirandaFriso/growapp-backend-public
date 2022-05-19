@@ -15,10 +15,8 @@ public class UserController {
     public String allAccess() {
         return "Public Content.";
     }
-    //public String allAccess() {return "Public Content.";}
 
     @GetMapping("/user")
-    //@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     //Ändra return
     public String userAccess() {
@@ -29,6 +27,6 @@ public class UserController {
     @PreAuthorize("hasRole('ADMIN')")
     //Ändra return
     public String adminAccess() {
-        return "Admin Board.";
+        return "Välkommen admin!";
     }
 }

@@ -18,13 +18,9 @@ public class MonthController {
     @Autowired
     private MonthRepository monthRepository;
 
-
     @GetMapping("/months")
     public List<Month> getMonths() {
         return this.monthRepository.findAll();
     }
-
-    //get /months/dynamisk månad
-
 }
 

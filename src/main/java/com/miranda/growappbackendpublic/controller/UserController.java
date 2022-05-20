@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "http://localhost:8081")
 @RestController
-@RequestMapping("/api/test")
+@RequestMapping("/growapp/role")
 public class UserController {
     @GetMapping("/all")
     //Ändra return

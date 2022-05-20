@@ -1,7 +1,7 @@
 package com.miranda.growappbackendpublic.security.services;
 
 import com.miranda.growappbackendpublic.model.User;
-import com.miranda.growappbackendpublic.repository.NewUserRepository;
+import com.miranda.growappbackendpublic.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,12 +12,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
-    NewUserRepository newUserRepository;
+    UserRepository userRepository;
 
     @Override
     @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = newUserRepository.findByUsername(username)
+        User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("Användaren hittades inte med användarnamnet: " + username));
         return UserDetailsImpl.build(user);
     }

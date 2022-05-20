@@ -11,21 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/growapp/role")
 public class UserController {
     @GetMapping("/all")
-    //Ändra return
     public String allAccess() {
-        return "Public Content.";
+        return "Testa att se att alla har tillgång till det här API:et.";
     }
 
     @GetMapping("/user")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
-    //Ändra return
     public String userAccess() {
-        return "User Content.";
+        return "Testar innehåll för användare som kan nås av både USER och ADMIN.";
     }
 
     @GetMapping("/admin")
     @PreAuthorize("hasRole('ADMIN')")
-    //Ändra return
     public String adminAccess() {
         return "Välkommen admin!";
     }

@@ -7,7 +7,7 @@ import com.miranda.growappbackendpublic.payload.request.LoginRequest;
 import com.miranda.growappbackendpublic.payload.request.SignupRequest;
 import com.miranda.growappbackendpublic.payload.response.JwtResponse;
 import com.miranda.growappbackendpublic.payload.response.MessageResponse;
-import com.miranda.growappbackendpublic.repository.NewUserRepository;
+import com.miranda.growappbackendpublic.repository.UserRepository;
 import com.miranda.growappbackendpublic.repository.RoleRepository;
 import com.miranda.growappbackendpublic.security.jwt.JwtUtils;
 import com.miranda.growappbackendpublic.security.services.UserDetailsImpl;
@@ -33,7 +33,7 @@ public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
     @Autowired
-    NewUserRepository newUserRepository;
+    UserRepository userRepository;
     @Autowired
     RoleRepository roleRepository;
     @Autowired
@@ -61,17 +61,18 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
-        if (newUserRepository.existsByUsername(signUpRequest.getUsername())) {
+        if (userRepository.existsByUsername(signUpRequest.getUsername())) {
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Användarnamnet är upptaget."));
         }
-        if (newUserRepository.existsByEmail(signUpRequest.getEmail())) {
+        if (userRepository.existsByEmail(signUpRequest.getEmail())) {
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Emailadressen används redan."));
         }
-        // Create new user's account
+
+        // Ska nytt användarkonto
         User user = new User(signUpRequest.getUsername(),
                 signUpRequest.getEmail(),
                 encoder.encode(signUpRequest.getPassword()));
@@ -97,7 +98,7 @@ public class AuthController {
             });
         }
         user.setRoles(roles);
-        newUserRepository.save(user);
+        userRepository.save(user);
         return ResponseEntity.ok(new MessageResponse("Användaren har registrerats!"));
     }
 

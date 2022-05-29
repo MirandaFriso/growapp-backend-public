@@ -1,7 +1,6 @@
 package com.miranda.growappbackendpublic.controller;
 
 import com.miranda.growappbackendpublic.model.Plant;
-import com.miranda.growappbackendpublic.repository.PlantRepository;
 import com.miranda.growappbackendpublic.service.PlantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -34,7 +33,6 @@ public class PlantController {
         return plantService.getPlants();
     }
 
-    //Hämtar ut information om en planta
     @GetMapping(value = "plants/id/{id}")
     public Optional<Plant> findPlantById(@PathVariable("id") long id) {
         return plantService.findById(id);

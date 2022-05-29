@@ -56,14 +56,4 @@ public class Plant {
     public void setHarvest(int harvest) {
         this.harvest = harvest;
     }
-
-/*    @Override
-    public String toString() {
-        return "Plant{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", so=" + so +
-                ", harvest=" + harvest +
-                '}';
-    }*/
 }

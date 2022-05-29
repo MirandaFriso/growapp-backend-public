@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @GetMapping("/all")
     public String allAccess() {
+
         return "Testa att se att alla har tillgång till det här API:et.";
     }
 

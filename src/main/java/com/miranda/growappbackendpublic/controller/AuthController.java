@@ -72,7 +72,7 @@ public class AuthController {
                     .body(new MessageResponse("Emailadressen används redan."));
         }
 
-        // Ska nytt användarkonto
+        // Skapa nytt användarkonto
         User user = new User(signUpRequest.getUsername(),
                 signUpRequest.getEmail(),
                 encoder.encode(signUpRequest.getPassword()));
